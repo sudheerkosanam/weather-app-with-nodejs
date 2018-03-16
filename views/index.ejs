@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather Web</title>
+	<meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<br>
+<div class="container">
+	<div class="container">
+      <fieldset>
+        <form action="/" method="post">
+          <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+          <input type="submit" class="ghost-button" value="Get Weather">
+        </form>
+        <br>  <!-- ejs has opening and closing tags in this format -->
+             <% if(weather !== null){ %>
+          <p><%= weather %></p>
+        <% } %>
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+      </fieldset>
+    </div>
+</div>
+
+</body>
+</html>
